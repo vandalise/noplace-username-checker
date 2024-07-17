@@ -1,6 +1,7 @@
 import random, os, ctypes, httpx, threading, time
 from colorama import init, Fore
 
+
 os.system("cls||clear")
 init()
 
@@ -26,6 +27,7 @@ def runner():
         sliced_combo = usernames[int(len(usernames) / threadsAmount * i) : int(len(usernames) / threadsAmount * (i + 1))]
         threading.Thread(target=worker,args=(sliced_combo,i,)).start()
 
+
 def seek(username):
     global checked, available
     while True:
@@ -47,7 +49,8 @@ def seek(username):
             else:
                 print(f"{Fore.WHITE}[{Fore.RED}+{Fore.WHITE}] {username}")
         except:
-            continue # Proxy issue
+            # Proxy issue
+            continue
         checked+=1
         break
 
@@ -63,6 +66,7 @@ def get_proxies():
         except Exception as e:
             print(f"{Fore.WHITE}[{Fore.RED}-{Fore.WHITE}] Failed to fetch proxies. Retrying in 3 seconds. Error: {e} {Fore.RESET}")
             time.sleep(3)
+            continue            
 
 def check_proxy(proxy):
     try:
@@ -75,7 +79,6 @@ def updateTitle():
     global checked, available
     while True:
         ctypes.windll.kernel32.SetConsoleTitleW(f"Usernames Checked: {checked} - Available: {available} | Proxies Scraped: {len(proxies)} - Proxies Valid: {len(valid_proxies)}")
-
 
 threading.Thread(target=updateTitle).start()
 threading.Thread(target=runner).start()
