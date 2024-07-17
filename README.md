@@ -28,7 +28,7 @@ The script utilizes multithreading to efficiently check the availability of user
 
 ## Usage
 Run the script:
-    ```bash
+    ```
     python bot.py
     ```
 
