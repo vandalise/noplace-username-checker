@@ -1,9 +1,11 @@
-import threading, random, ctypes, httpx, time, os, sys
+import random, os, ctypes, httpx, threading, time
 from colorama import init, Fore
+import sys
 
-init(); os.system("cls||clear")
+init()
+os.system("cls||clear")
 
-checked, available, proxies, valid_proxies, proxies_lock, start_time = 0, 0, [], [], threading.Lock(), time.time()
+checked, available, proxies, valid_proxies, start_time = 0, 0, [], [], time.time()
 
 usernames = list(open("usernames.txt", "r").read().splitlines()) if (os.path.isfile("usernames.txt") and os.path.getsize("usernames.txt") > 0) else (print("Put your usernames in usernames.txt"), input("Press Enter to exit..."), sys.exit())
 
