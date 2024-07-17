@@ -1,8 +1,7 @@
 import threading, random, ctypes, httpx, time, os, sys
 from colorama import init, Fore
 
-init()
-os.system("cls||clear")
+init(); os.system("cls||clear")
 
 checked, available, proxies, valid_proxies, proxies_lock, start_time = 0, 0, [], [], threading.Lock(), time.time()
 
