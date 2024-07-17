@@ -1,6 +1,5 @@
-import random, os, ctypes, httpx, threading, time
+import threading, random, ctypes, httpx, time, os, sys
 from colorama import init, Fore
-import sys
 
 init()
 os.system("cls||clear")
