@@ -49,8 +49,7 @@ def seek(username):
             else:
                 print(f"{Fore.WHITE}[{Fore.RED}+{Fore.WHITE}] {username}")
         except:
-            # Proxy issue
-            continue
+            continue # Proxy issue
         checked+=1
         break
 
