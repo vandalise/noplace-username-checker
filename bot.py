@@ -1,7 +1,6 @@
 import random, os, ctypes, httpx, threading, time
 from colorama import init, Fore
 
-
 os.system("cls||clear")
 init()
 
@@ -26,7 +25,6 @@ def runner():
     for i in range(threadsAmount):
         sliced_combo = usernames[int(len(usernames) / threadsAmount * i) : int(len(usernames) / threadsAmount * (i + 1))]
         threading.Thread(target=worker,args=(sliced_combo,i,)).start()
-
 
 def seek(username):
     global checked, available
