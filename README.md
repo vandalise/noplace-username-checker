@@ -1,7 +1,3 @@
-# NoPlace Username Availability Checker
-
-This Python script checks the availability of usernames on the NoPlace app using multiple threads and rotates proxies fetched from a proxy API.
-
 ## Demonstration
 <img src=https://i.gyazo.com/dc40cad12e984916ed90d4f70f94e7f9.gif>
 
