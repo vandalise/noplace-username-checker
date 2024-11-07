@@ -1,10 +1,6 @@
 ## Demonstration
 <img src=https://i.gyazo.com/dc40cad12e984916ed90d4f70f94e7f9.gif>
 
-## Overview
-
-The script utilizes multithreading to efficiently check the availability of usernames on the NoPlace app. Proxies are rotated to prevent rate limiting and IP bans, ensuring reliable performance during the username checking process.
-
 ## Features
 
 - **Multithreaded Processing:** Utilizes multiple threads to check usernames concurrently, enhancing speed and efficiency.
@@ -30,7 +26,3 @@ Run the script:
     ```
     python bot.py
     ```
-
-## Why?
-
-I developed this script to explore potential username availability on the NoPlace app, with the idea of generating usernames for resale if the app gains popularity. Unfortunately, the NoPlace app requires a 2FA (Two-Factor Authentication) code for the login processes. This means if we generate an account we will not be able to login... During the sign-up process, an access token (bearer token) is provided, which allows access to account information. However, leveraging this token to log into the account needs more investigation.
